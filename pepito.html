@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Euro Repair</title>
+    <link rel="icon" href="aer.jpg" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+             background-image: url('frank.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .header-content {
+            display: center;
+            justify-content: center;
+        }
+        header img {
+            vertical-align: middle;
+        }
+        nav {
+            background-color: #D50C0C;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            width: 90%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3, h4, h5 {
+            color: #D50C0C;
+        }
+        .interactive {
+            color: black;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .interactive:hover {
+            color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+        .table {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .table .row.header {
+            background-color: #D50C0C;
+            color: white;
+            font-weight: bold;
+        }
+        .table .row div {
+            flex: 1;
+            text-align: center;
+        }
+        .table .row div:first-child {
+            text-align: right;
+        }
+        .table .row div:last-child {
+            text-align: left;
+        }
+         footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            }
+
+       .footer-section {
+            flex: 1;
+            padding: 10px;
+            }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+            }
+
+        .footer-section p,
+        .footer-section ul {
+           margin: 0;
+           padding: 0;
+           list-style: none;
+            }
+
+        .footer-section ul li {
+          margin-bottom: 5px;
+            }
+
+        .footer-section ul li a {
+         color: #fff;
+         text-decoration: none;
+            }
+
+       .footer-section ul li a:hover {
+         text-decoration: underline;
+            }
+
+       .footer-bottom {
+         text-align: center;
+         padding: 10px;
+         border-top: 1px solid #444;
+            }
+
+        .footer-bottom p {
+          margin: 0;
+            }
+
+        .social-media {
+          display: flex;
+          justify-content: center;
+            }
+
+       .social-media li {
+         margin: 0 10px;
+            }
+        .bartolo {
+            background-color: white;
+            text-align: rigth;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="aer.jpg" alt="left" style="width: 80px; height: 60px; margin: 20px;">
+            <img src="autopaire.png" style="width: 700px; height: 80px; margin: 20px;">
+            
+            </div>
+    </header>
+    <nav>
+        <a href="https://wa.me/524773998752"> <img src="whasa.png" style="width: 27px; height: 22px;"></a>
+        <a href="mailto:autopair.13@gmail.com"> <img src="gema.png" style="width: 28px; height: 25px;"></a>
+        <a href="https://www.facebook.com/autoeurorepair.aer?locale=es_LA"> <img src="face.png" style="width: 20px; height: 20px;"></a>
+        <a href="aer.html"> Inicio</a>
+        
+    </nav>
+    <div id="servicios" style="margin: 20px;">
+        <h2>Nuestros Servicios</h2>
+        <p>Puedes dar clic en cada servicio para ver más detalles.</p>
+        
+        <div class="table">
+            <div class="row header">
+                <div>Servicios y Detalles</div>
+            </div>
+            <div class="row interactive" onclick="mostrarOpciones('opciones120')">
+                <div>Diagnósticos</div>
+            </div>
+            <div id="opciones120" class="row hidden">
+                <div colspan="2">
+                    <ul>
+                        <li>Diagnóstico profundo por falla (24 a 48 horas) a $1200.00</li>
+                        <li>Diagnóstico general (1 a 4 horas) $600.00</li>
+                    </ul>
+                    <p>Revisión garantizada en caso de autorización de la reparación se descontará el diagnóstico de tu cuenta.</p>
+                </div>
+            </div>
+            <div class="row interactive" onclick="mostrarOpciones('opciones1')">
+                <div>Cambio de Aceite</div>
+            </div>
+            <div id="opciones1" class="row hidden">
+                <div colspan="2">
+                    <ul>
+                        <li class="interactive" onclick="mostrarOpciones('opciones8')">Servicio menor</li>
+                        <div id="opciones8" class="hidden">
+                            <ul>
+                                <li>Filtro de aceite</li>
+                                <li>Aceite sintético o mineral</li>
+                                <li>Lavado de cuerpo de aceleración</li>
+                                <li>Limpieza de frenos</li>
+                                <li>Rellenado de niveles (anticongelante, líquido de frenos, aceite dirección, limpia parabrisas)</li>
+                                <li>Escaneado y borrado de códigos</li>
+                                <li>Diagnóstico general del vehículo</li>
+                                <li>Lavado de carrocería, motor y lavado de motores</li>
+                                <br>
+                                <li><a href="https://wa.link/250kxx">Puedes contactarnos vía WhatsApp para cotizar según tu unidad.</a></li>
+                            </ul>
+                        </div>
+                        <li class="interactive" onclick="mostrarOpciones('opciones9')">Servicio mayor</li>
+                        <div id="opciones9" class="hidden">
+                            <ul>
+                                <li>Bujías</li>
+                                <li>Filtro de aire</li>
+                                <li>Filtro de gasolina (si es necesario)</li>
+                                <li>Filtro de aceite</li>
+                                <li>Aceite sintético o mineral</li>
+                                <li>Lavado de cuerpo de aceleración</li>
+                                <li>Limpieza de frenos</li>
+                                <li>Rellenado de niveles</li>
+                                <li>Escaneado y borrado de códigos</li>
+                                <li>Diagnóstico general del vehículo</li>
+                                <li>Lavado de carrocería, motor y lavado de motores</li>
+                                <br>
+                                <li><a href="https://wa.link/dckmlm">Puedes contactarnos vía WhatsApp para cotizar según tu unidad.</a></li>
+                            </ul>
+                        </div>
+                        <li class="interactive" onclick="mostrarOpciones('opciones10')">Lavado de Inyectores</li>
+                        <div id="opciones10" class="hidden">
+                            <ul>
+                                <li>Lavado de inyectores presurizado $450.00</li>
+                                <li>Lavado de inyectores por ultrasonido (un solo inyector) $250.00</li>
+                            </ul>
+                        </div>
+                    </ul>
+                    <p>Mantenemos tu motor en perfecto estado, con los mejores aceites o el aceite de tu elección.</p>
+                </div>
+            </div>
+            <div class="row interactive" onclick="mostrarOpciones('opciones2')">
+                <div>Frenos</div>
+            </div>
+            <div id="opciones2" class="row hidden">
+                <div colspan="2">
+                    <ul>
+                        <li class="interactive" onclick="mostrarOpciones('opciones11')">Servicio de Frenos</li>
+                        <div id="opciones11" class="hidden">
+                            <ul>
+                                <li>Cambio de balatas delanteras con rectificado de discos y piezas del sistema de frenado</li>
+                                <li><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20me%20gustaría%20cotizar%20el%20servicio%20de%20frenos%20delanteros%20para%3A">Consulta tu cotización vía WhatsApp según tu unidad.</a></li>
+                                <li>Cambio de balatas traseras con rectificados de discos y piezas del sistema de frenado</li>
+                                <li><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20me%20gustaría%20cotizar%20el%20servicio%20de%20frenos%20traseros%20para%3A">Consulta tu cotización vía WhatsApp según tu unidad.</a></li>
+                            </ul>
+                        </div>
+                        <li>Limpieza de frenos, purgar frenos</li>
+                        <li>Rectificado de discos</li>
+                        <li>Cambio de líquido de frenos</li>
+                    </ul>
+                    <p>Diagnóstico, cambio de balatas, rectificado de discos, cambio de líquido de frenos y mantenimiento de sistemas de frenos para tu seguridad.</p>
+                </div>
+            </div>
+            <div class="row interactive" onclick="mostrarOpciones('opciones3')">
+                <div>Suspensión</div>
+            </div>
+            <div id="opciones3" class="row hidden">
+                <div colspan="2">
+                    <p>Mantenemos tu vehículo en las mejores condiciones para un manejo seguro y confortable.</p>
+                </div>
+            </div>
+            <div class="row interactive" onclick="mostrarOpciones('opciones4')">
+                <div>Aire Acondicionado</div>
+            </div>
+            <div id="opciones4" class="row hidden">
+                <div colspan="2">
+                    <ul>
+                        <li class="interactive" onclick="mostrarOpciones('opciones14')">Recarga de Aire Acondicionado</li>
+                        <div id="opciones14" class="hidden">
+                            <ul>
+                                <li>Con servicio menor $300.00</li>
+                                <li>Con servicio mayor $500.00</li>
+                            </ul>
+                        </div>
+                        <li>Cambio de filtro de cabina y limpieza general </li>
+                        <li>Cambio de carga de gas y reparacion de lineas de aire acondicionado</li>
+                    </ul>
+                    <p>Mantenimiento y recarga de aire acondicionado para tu comodidad.</p>
+                </div>
+                
+            </div>
+            <div class="row interactive" onclick="mostrarOpciones('opciones5')">
+                <div>Hojalateria y pintura</div>
+            </div>
+            <div id="opciones22" class="row hidden">
+                <div colspan="2">
+                    <ul>
+                        <li> Pulir y encerada</li>
+                        <li> Reparacion de golpe grande</li>
+                        <li> Dotar la instalacion de piezas</li>
+                        <li> Pintura general</li>
+                    </ul>
+                   <p>Reparación de carrocería y pintura para dejar tu auto como nuevo.</p>
+                </div>
+            </div>
+            <div class="row interactive" onclick="mostrarOpciones('opciones5')">
+                <div>Detallado estetico</div>
+            </div>
+            <div id="opciones52" class="row hidden">
+                <p>Limpieza y cuidado detallado del interior y exterior de tu vehículo. </p>
+            </div>
+         <div class="row interactive" onclick="mostrarOpciones('opciones90')">
+                <div>Cambio o reparacion de motor</div>
+            </div>
+            <div id="opciones90" class="row hidden">
+                <div colspan="90">
+                    <ul>
+                        <li class="interactive" onclick="mostrarOpciones('opciones91')"> Cambio de motor</li>
+                        <div id="opciones91" class="hidden">
+                            <ul>
+                                <li>Cambio de motor: motor semi nuevo con factura a cambio del motor usado (no incluye refacciones adicionales fueras del motor. incluye bujias, filtro de aceite, aceite y todo componente que se encuentre dentro del motor totalmente nuevo)</li>
+                                <li><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20me%20gustaria%20cotizar%20un%20motor%20para%3A"> Puedes consultar tu cotizacion via whatsapp segun tu unidad, manejamos marcas genericas y originales</a></li>
+                            </ul>
+                        </div>
+                        <li class="interactive" onclick="mostrarOpciones('opciones92')">Cambio de transmision</li>
+                        <div id="opciones92" class="hidden">
+                            <ul>
+                                <li>Cambio de transmisión: transmisión semi nueva con aceite de transmisión y filtro de transmision nuevo</li>
+                                 <li><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20una%20transmisi%C3%B3n%20para%3A""> Puedes consultar tu cotizacion via whatsapp segun tu unidad, manejamos marcas genericas y originales</a></li>
+                                </ul>
+                            </div>
+                        <li class="interactive" onclick="mostrarOpciones('opciones93')">Reparacion de motor</li>
+                        <div id="opciones93" class="hidden">
+                            <ul>
+                                <li>Rectificado de cabeza</li>
+                                <li>Anillado</li>
+                                <li>Empacada general</li>
+                                <li>Cambio de buzos</li>
+                                <li>Cambio de metales</li>
+                                <li>Cambio de pistones</li>
+                                <li>Cambio de sellos</li>
+                                <li>Cambio de bujias, filtro de aceite y aceite</li>
+                                <li>Cambio de tomas o mangueras o anticongelante</li>
+                                <li>Cambios de componentes dentro del motor</li>
+                                <br>Estos pueden ser algunos de los factores que se llegan a reparar en una falla grande  de motor. Se tiene que agendar una cita para un diagnostico profundo por  falla via whatsapp
+                         <h5><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20tengo%20un%20problema%20con%20mi%20motor%2C%20me%20gustaria%20agendar%20una%20cita%2C%20mi%20unidad%20es%3A%20%0A">Se tiene que agendar una cita para un diagnostico profundo por  falla via whatsapp </a></h5>
+                    </ul>
+                    <p>Realizamos cambios de motor completos y parciales con piezas de alta calidad, asegurando que tu vehículo funcione con el máximo rendimiento y fiabilidad</p>
+                </div>
+                        </ul>
+             <div class="row interactive" onclick="mostrarOpciones('opciones5')">
+                <div>Reparacion de fallas</div>
+            </div>
+            <div id="opciones52" class="row hidden">
+                <p>Ofrecemos reparación de fallas mecánicas y eléctricas para todo tipo de vehículos, garantizando un diagnóstico preciso y soluciones efectivas para mantener tu auto en perfecto estado</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function mostrarOpciones(id) {
+            var x = document.getElementById(id);
+            if (x.classList.contains('hidden')) {
+                x.classList.remove('hidden');
+            } else {
+                x.classList.add('hidden');
+            }
+        }
+    </script>
+            <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>Dirección: Bulevard Juan Alonso de Torres #409, Colonia San Jeronimo II Secc., León</p>
+            <p>Teléfono: 477 399 8752</p>
+            <p>Email: <a href="mailto:autopair.13@gmail.com">autopair.13@gmail.com</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Síguenos</h4>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com/autoeurorepair.aer?locale=es_LA">Facebook</a></li>
+                <li><a href="https://wa.me/524773998752">WhatsApp</a></li>
+                <li><a href="mailto:autopair.13@gmail.com">Email</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Auto Euro Repair. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

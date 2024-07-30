@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Euro Repair</title>
+    <link rel="icon" href="aer.jpg" type="image/png">
+    <style>
+        .interactive {
+            color: black; /* Color inicial del texto */
+            cursor: pointer; /* Cambia el cursor a una mano */
+            transition: color 0.3s ease; /* Transición suave del color */
+        }
+        .interactive:hover {
+            color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        body {
+            background-image: url('paps.jpeg');
+            background-size: 80% 80%;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('frank.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .header-content {
+            display: center;
+            justify-content: center;
+        }
+        nav {
+            background-color: white; 
+            color: black;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: bold;
+        }
+        .container {
+            width: 90%;
+            margin: 50px ;
+            background-color: white;
+            padding: 20px;
+            }
+        .paco {
+            width: 50%;
+            margin: 20px;
+            padding: 10px;
+        }
+           .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .pedrito {
+            color: black;
+            font-family: verdana, sans-serif; 
+            text-align: center; 
+            background-image: url('engrana.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .juanito {
+            background-color: #FFFFFF;
+            color: black;
+            font-family: arial, sans-serif; 
+            }
+        .manuel {
+            text-align: center;
+            }
+        .final {
+            background-color: grey;
+            }
+        .contactos {
+            color: black;
+            font-family: verdana, sans-serif; 
+            text-align: center; 
+            background-image: url('degra.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+            
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="aer.jpg" alt="left" style="width: 80px; height: 60px;">
+            <img src="autopaire.png" style="width: 700px; height: 80px;">
+            
+            </div>
+    </header>
+    <nav id="servicios">
+        <h2>Nuestros Servicios (puedes dar click en </h2>
+        <h3 onclick="mostrarOpciones('opciones120')" class="interactive"><li>Diagnosticos --></li></h3>
+         <div id="opciones120" class="hidden">
+             <ul>
+                 <h4><li>Diagnostico profundo por falla (24 a 48 horas) a $1200.00</li></h4>
+                 <h4><li>Diagnostico general (1 a 4 horas) $600.00</li></h4>
+             </ul>
+         </div>
+        <p>Revicion garantizada en caso de autorizacion de la reparacion se descontara el diagnostico de tu cuenta</p>
+    <h3 onclick="mostrarOpciones('opciones1')" class="interactive"><li>Cambio de aceite --> </li></h4>
+    <div id="opciones1" class="hidden">
+        <ul>
+            <h4 onclick="mostrarOpciones('opciones8')" class="interactive"><li>Servicio menor --> </li></h4>
+            <div id="opciones8" class="hidden">
+                <ul>
+                    <li>Filtro de aceite</li>
+                    <li>Aceite sintetico o mineral</li>
+                    <li>Lavado de cuerpo de aceleracion</li>
+                    <li>Limpieza de frenos</li>
+                    <li>Rellenado de niveles (anticongelante, liquido de frenos, aceite direccion, limpia parabrizas)</li>
+                    <li>Escaneado y borrado de codigos</li>
+                    <li>Diagnostico general del vehiculo</li>
+                    <li>Lavado de carroseria,motor y lavado de motores</li>
+                    <br><h5><a href="https://wa.link/250kxx"> Puedes contactarnos vía whatsapp para cotizar según su unidad. Manejamos refacciones genericas y originales según su preferencia. te igualamos el precio y te damos una recomendacion de la mejor calidad</a></h5>
+                </ul>
+            </div>
+            <h4 onclick="mostrarOpciones('opciones9')" class="interactive"><li>Servicio mayor --></li></h4>
+            <div id="opciones9" class="hidden">
+                <ul>
+                    <li>Bujias</li>
+                    <li>Filtro de aire</li>
+                    <li>Filtro de gasolina(en caso de que lo necesite)</li>
+                    <li>Filtro de aceite</li>
+                    <li>Aceite sintetico o mineral</li>
+                    <li>Lavado de cuerpo de aceleracion</li>
+                    <li>Limpieza de frenos</li>
+                    <li>Rellenado de niveles (anticongelante, liquido de frenos, aceite de direccion, limpia parabrizas)</li>
+                    <li>escaneado y borrado de codigos</li>
+                    <li>Diagnostico general de vehiculos</li>
+                    <li>Lavado de carroseria, motor y lavado de motores</li>
+                    <br><h5><a href="https://wa.link/dckmlm"> Puedes contactarnos vía whatsapp para cotizar según su unidad. Manejamos refacciones genericas y originales según su preferencia. te igualamos el precio y te damos una recomendacion de la mejor calidad</a></h5>
+                </ul>
+            </div>
+            <h4 onclick="mostrarOpciones('opciones10')" class="interactive"><li>Lavado de inyectores --></li></h4>
+            <div id="opciones10" class="hidden">
+                <ul>
+                    <li>Lavado de inyectores presurizado $450.00</li>
+                    <li>Lavado de inyectores por ultrasonido (un solo  inyector) 250.00$</li>
+                </ul>
+            </div>
+    </div>
+            <p>Mantenemos tu motor en perfecto estado, con los mejores aceites o el aceite de su eleccion</p>
+
+    <h3 onclick="mostrarOpciones('opciones2')" class="interactive"><li>Frenos --> </li></h3>
+    <div id="opciones2" class="hidden">
+        <ul>
+            <h4 onclick="mostrarOpciones('opciones11')" class="interactive"><li>Servicio de frenos --> </li></h4>
+            <div id="opciones11" class="hidden">
+                    <ul>
+                        <li>Cambio de balatas delanteras con rectificado de discos y pieza de sistema de frenado</li>
+                        <h5><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20me%20gustaria%20cotizar%20el%20servicio%20de%20frenos%20delanteros%20para%3A"> Puedes consultar tu cotizacion via whatsapp segun tu unidad, manejamos marcas genericas y originales</a></h5>
+                        
+                       <li>Cambio de balatas traseras con rectificados de discos y pieza de sistema de frenado</li>
+                       <h5><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20me%20gustaria%20cotizar%20el%20servicio%20de%20frenos%20traseros%20para%3A"> Puedes consultar tu cotizacion via whatsapp segun tu unidad, manejamos marcas genericas y originales</a></h5>
+                    </ul>
+            </div>    
+            <h4><li>limpieza de frenos, purgar frenos</li></h4>
+            <h4><li>Rectificado de disco</li></h4>
+            <h4><li>Cambio de liquido de frenos</li></h4>
+            </ul>
+    </div>
+<p>Diagnóstico, cambio de Balatas, rectificado de discos, cambio de liquido de frenos y mantenimiento de sistemas de frenos para tu seguridad.</p>
+
+    <h3><li>Suspencion</li></h3>
+         <p> Reparación y ajuste de la suspensión para una conducción suave y segura.</p>    
+    <h3 onclick="mostrarOpciones('opciones4')" class="interactive"><li>Aire acondicionado --></li></h3>
+          <div id="opciones4" class="hidden">
+              <ul>
+                <h4 onclick="mostrarOpciones('opciones15')" class="interactive"><li>Servicio de aire acondicionado --></li></h4>
+                <div id="opciones15" class="hidden">
+                    <ul>
+                        <li>Limpieza de componentes de aire acondicionado</li>
+                        <li>Realizar vacío con bomba</li>
+                        <li>Cambio de carga de gas</li>
+                        <li>Cambio de filtro de cabina</li>
+                        <br>puedes cotizar tu cotizacion via whatsapp, manejamos filtros genericos y originales
+                    </ul>
+                </div>
+                <h4><li>Cambio de filtro de cabina y limpieza general</li></h4>
+                <h4><li>Cambio de carga de gas y reparacion de lineas de aire acondicionado</li></h4>
+                <h4><li>Reparacion de compresor</li></h4>
+                <h4><li>Motor de aire acondicionado y componentes mas complejos</li></h4>
+          </div>
+            <p>Servicio y reparación de sistemas de aire acondicionado para tu confort.</p>
+
+        <h3 onclick="mostrarOpciones('opciones5')" class="interactive"><li>Hojalateria y pintura --></li></h3>
+         <div id="opciones5" class="hidden">
+             <ul>
+                 <h4><li>Pulir y encerada</li></h4>
+                 <h4><li>Reparacion de golpe grande</li></h4>
+                 <h4><li>dotar la instalacion de piezas</li></h4>
+                 <h4><li>Pintura general</li></h4>
+             </ul>
+         </div>
+             <p>Reparación de carrocería y pintura para dejar tu auto como nuevo.</p>
+        <h3><li>Detallado estetico</li></h3>
+            <p>Limpieza y cuidado detallado del interior y exterior de tu vehículo.</p>
+
+        <h3 onclick="mostrarOpciones('opciones7')" class="interactive"><li>Cambio o reparación de motor --></li></h3>
+        <div id="opciones7" class="hidden">
+            <ul>
+            <h4 onclick="mostrarOpciones('opciones57')" class="interactive"><li> Cambio de motor --></li></h4>
+                 <div id="opciones57" class="hidden">
+                     <ul>
+                         <li> Cambio de motor: motor semi nuevo con factura a cambio del motor usado (no incluye refacciones adicionales fueras del motor. incluye bujias, filtro de aceite, aceite y todo componente que se encuentre dentro del motor totalmente nuevo)</li>
+                         <h5><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20me%20gustaria%20cotizar%20un%20motor%20para%3A"> Puedes consultar tu cotizacion via whatsapp segun tu unidad, manejamos marcas genericas y originales</a></h5>
+                     <ul>
+                 </div>
+            <h4 onclick="mostrarOpciones('opciones77')" class="interactive"><li> Cambio transmision --></li></h4>
+                 <div id="opciones77" class="hidden">
+                     <ul>
+                         <li>Cambio de transmisión: transmisión semi nueva con aceite de transmisión y filtro de transmision nuevo </li>
+                           <h5><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20una%20transmisi%C3%B3n%20para%3A"> Puedes consultar tu cotizacion via whatsapp segun tu unidad, manejamos marcas genericas y originales</a></h5>
+                         </div>
+            <h4 onclick="mostrarOpciones('opciones100')" class="interactive"><li>Reparacion de motor --></li></h4>
+                 <div id="opciones100" class="hidden">
+                     <ul>
+                         <li>Rectificado de cabeza</li>
+                         <li>Anillado</li>
+                         <li>Empacada general</li>
+                         <li>Cambio de buzos</li>
+                         <li>Cambio de metales</li>
+                         <li>Cambio de pistones</li>
+                         <li>Cambio de sellos </li>
+                         <li>Cambio de bujias, filtro de aceite y aceite </li>
+                         <li>Cambio de tomas o mangueras o anticongelante</li>
+                         <li>Cambios  de componentes dentro del motor</li>
+                         <br>Estos pueden ser algunos de los factores que se llegan a reparar en una falla grande  de motor. Se tiene que agendar una cita para un diagnostico profundo por  falla via whatsapp
+                         <h5><a href="https://api.whatsapp.com/send?phone=5214773998752&text=Hola%2C%20tengo%20un%20problema%20con%20mi%20motor%2C%20me%20gustaria%20agendar%20una%20cita%2C%20mi%20unidad%20es%3A%20%0A">Se tiene que agendar una cita para un diagnostico profundo por  falla via whatsapp </a></h5>
+                     <ul>
+                 </div>
+               
+             </ul>
+        </div> 
+        <p>ksadmaskdjsadjasd</p>
+        <h3><li>Reparacion de fallas</li></h3>
+                           <p>ksadmaskdjsadjasd</p>
+             </ul>
+         </div>
+    </ul> 
+            </div>
+    <script>
+        function mostrarOpciones(id) {
+            var opciones = document.getElementById(id);
+            if (opciones.classList.contains("hidden")) {
+                opciones.classList.remove("hidden");
+            } else {
+                opciones.classList.add("hidden");
+            }
+        }
+    </script> 
+    </div>
+</body>
+</html>

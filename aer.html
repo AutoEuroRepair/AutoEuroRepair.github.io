@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="lenguage" content="spanish">
+    <meta name="copirygth" content="Mecanica">
+    <meta name="author" content="auto euro repair">
+    <meta name="service" content="autosreparacion">
+    <meta name="audience" content="all">
+    <meta name="description" content=" Aqui en Auto euro Repair, puedes conseguir los mejores servicios en leon gto, contactanos">
+    <meta name="keywords" content="auto euro repair, mecanica, taller mecanico en leon, reparacion de autos">
+    <meta name="category" content="taller automotriz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Euro Repair</title>
+    <link rel="icon" href="aer.jpg" type="image/png">
+    <style>
+        .interactive {
+            color: black; /* Color inicial del texto */
+            cursor: pointer; /* Cambia el cursor a una mano */
+            transition: color 0.3s ease; /* Transición suave del color */
+        }
+        .interactive:hover {
+            color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        body {
+            background-image: url('paps.jpeg');
+            background-size: 80% 80%;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('frank.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .header-content {
+            display: center;
+            justify-content: center;
+        }
+        nav {
+            background-color: #D50C0C; 
+            color: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: bold;
+        }
+        .container {
+            width: 90%;
+            margin: 50px ;
+            background-color: white;
+            padding: 20px;
+            }
+        .paco {
+            width: 50%;
+            margin: 20px;
+            padding: 10px;
+        }
+           .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .pedrito {
+            color: black;
+            font-family: verdana, sans-serif; 
+            text-align: center; 
+            background-image: url('engrana.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .juanito {
+            background-color: #FFFFFF;
+            color: black;
+            font-family: arial, sans-serif; 
+            }
+        .manuel {
+            text-align: center;
+            text-decoration: bold;
+            }
+        .final {
+            background-color: grey;
+            }
+        .contactos {
+            color: black;
+            font-family: verdana, sans-serif; 
+            text-align: center; 
+            background-image: url('degra.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+        .image-container {
+            overflow: hidden;
+            display: inline-block;
+            }
+
+        .hover-image {
+            transition: transform 0.3s ease;
+            }
+
+        .hover-image:hover {
+            transform: scale(1.2);
+            }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            }
+
+       .footer-section {
+            flex: 1;
+            padding: 10px;
+            }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+            }
+
+        .footer-section p,
+        .footer-section ul {
+           margin: 0;
+           padding: 0;
+           list-style: none;
+            }
+
+        .footer-section ul li {
+          margin-bottom: 5px;
+            }
+
+        .footer-section ul li a {
+         color: #fff;
+         text-decoration: none;
+            }
+
+       .footer-section ul li a:hover {
+         text-decoration: underline;
+            }
+
+       .footer-bottom {
+         text-align: center;
+         padding: 10px;
+         border-top: 1px solid #444;
+            }
+
+        .footer-bottom p {
+          margin: 0;
+            }
+
+        .social-media {
+          display: flex;
+          justify-content: center;
+            }
+
+       .social-media li {
+         margin: 0 10px;
+            }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="aer.jpg" alt="left" style="width: 80px; height: 60px; margin: 20px;">
+            <img src="autopaire.png" style="width: 700px; height: 80px; margin: 20px;">
+            
+            </div>
+    </header>
+    <nav class="manuel">
+      <a href="#inicio">Inicio</a>
+        <a href="#ubicacion">Ubicacion</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://wa.me/524773998752"> <img src="whasa.png" style="width: 27px; height: 22px;"></a>
+        <a href="mailto:autopair.13@gmail.com"> <img src="gema.png" style="width: 28px; height: 25px;"></a>
+        <a href="https://www.facebook.com/autoeurorepair.aer?locale=es_LA"> <img src="face.png" style="width: 20px; height: 20px;"></a>
+        <a href="pepito.html"> Conoce nuestros servicios</a>
+    </nav>
+    <nav class="pedrito" id="inicio">
+     <div class="container"><br><h3>Bienvenido a Auto Euro Repair</h3>
+        <p>En Auto Euro Repair, nos comprometemos a ofrecer un servicio de la más alta calidad, utilizando nuestras mejores herramientas. Nuestro equipo de técnicos altamente capacitados está preparado para diagnosticar y reparar cualquier problema que tenga tu vehículo, garantizando siempre la mejor atención y soluciones eficaces.</div>
+        <img src="ush.jpg" alt="centered image" style="width: 505px; height: 350px;">
+    </nav>
+    <nav class="juanito" id="ubicacion">
+       <div><br>
+        <ul>
+        <h2>Auto Euro Repair, en Leon. Conoce nuestra sucursal, te esperamos.</h2>
+        <h3>Encuentranos en:</h3>
+        <p>Bulevard Juan Alonso de Torres #409</p>
+        <p>Colonia San Jeronimo II Secc.</p></div>
+        <ul>
+        <h3>Horarios: </h3>
+        <p>Lunes a Viernes de 9:00 am a 7:00pm</p>
+        <p>Sabados de 9:00 am a 4:00pm</p></ul>
+        <div class="paco" id">
+       <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="1000" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=blvd.+juan+alonso+de+Torres+%23409&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div> 
+    </nav>
+    <nav class="contactos" id="contacto">
+        <div class="container">
+        <h2>Contactanos</h3>
+        <p>Para hacer una cotizacion o agendar alguna cita, puedes contactarnos por medio de whatsapp, facebook o gmail.</p><br></div>
+        <div class="image-container">
+          <a href="https://wa.me/524773998752"> <img src="wasa.jpeg" class="hover-image" style="width: 200px; height: 250px;"></a></div>
+         <div class="image-container">
+          <a href="mailto:autopair.13@gmail.com"> <img src="gemail.jpeg" class="hover-image" style="width: 200px; height: 250px;"></a></div>
+        <div class="image-container">
+          <a href="https://www.facebook.com/autoeurorepair.aer?locale=es_LA"> <img src="face.jpeg" class="hover-image" style="width: 200px; height: 250px;"></a></div>
+        </nav>
+        <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>Dirección: Bulevard Juan Alonso de Torres #409, Colonia San Jeronimo II Secc., León</p>
+            <p>Teléfono: 477 399 8752</p>
+            <p>Email: <a href="mailto:autopair.13@gmail.com">autopair.13@gmail.com</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Síguenos</h4>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com/autoeurorepair.aer?locale=es_LA">Facebook</a></li>
+                <li><a href="https://wa.me/524773998752">WhatsApp</a></li>
+                <li><a href="mailto:autopair.13@gmail.com">Email</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Auto Euro Repair. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>
